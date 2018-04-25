@@ -1,5 +1,5 @@
 # 텐서보드를 이용해 graph 시각화 하기
-### 간단한 코드를 시각화 해보자
+### 간단한 코드를 시각화 해보자 - Tensorflow가 어떤 식으로 동작하는지 가늠할 수가 있다.
 ```python
 a = tf.add(1, 2)
     b = tf.multiply(a, 3) #곱하는 함수 tf.mat_mul은 matrix multiply이다.
@@ -17,4 +17,6 @@ a = tf.add(1, 2)
 
 ![img](https://github.com/jis1218/Tensorboard-practice/blob/master/img/img1.PNG)
 
+### cmd 창에서 텐서보드를 실행할 때는 다음과 같이 해준다.
+##### tensorboard --logdir=(데이터 들어있는 폴더)/
 
