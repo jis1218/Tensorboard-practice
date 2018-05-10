@@ -76,4 +76,11 @@ writer, add_summary(s, global_step=global_step)
 ##### 5. TensorBoard를 실행시킨다.
 
 
+### 하나의 모델인데 다른 파라미터로 비교해보고 싶은 경우(learning rate을 다르게 줄 경우)
+> ##### 파일 디렉토리를 다르게 하면 된다.
+> ##### 하나는 /logs/abc
+> ##### 다른 하나는 /logs/def
+> ##### 라고 한다면 -logdir=./logs 라고 하면 하위 디렉토리인 두개를 비교할 수가 있다.
+
+
 
