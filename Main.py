@@ -33,6 +33,30 @@ if __name__ == '__main__':
         writer = tf.summary.FileWriter("board", sess.graph)
         print (sess.run(h))
         
-        print(sess.run(m, feed_dict={k : 1, l : 3}))   
+        print(sess.run(m, feed_dict={k : 1, l : 3}))
+        t = tf.linspace(1.0, 5.0, 5, name="hello")
+        sess.run(tf.global_variables_initializer())
+        print(sess.run(t))
+        
+        k = tf.range(3 , 10, 3) # 3부터 10까지 3단위로 전부
+        sess.run(tf.global_variables_initializer())
+        print(sess.run(k))
+        
+        norm = tf.random_normal([2, 3], mean=-1, stddev=4)
+        sess.run(tf.global_variables_initializer())
+        print(sess.run(norm))
+        
+        norm = tf.random_uniform([2, 3])
+        sess.run(tf.global_variables_initializer())
+        print(sess.run(norm))
+        
+        c = tf.constant([[1, 2], [3, 4], [5, 6]])
+        shuff = tf.random_shuffle(c)
+        sess.run(tf.global_variables_initializer())
+        print(sess.run(shuff))
+        
+    
+    
+    
     
     pass

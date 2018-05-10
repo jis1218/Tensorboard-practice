@@ -48,3 +48,32 @@ a = tf.add(1, 2)
 ```
 ![img](https://github.com/jis1218/Tensorboard-practice/blob/master/img/img2.PNG)
 
+
+### TensorBoard 사용법
+##### 1. TF 그래프에서 어떤 tensor를 사용할 것인지 정한다.
+```python
+w2_hist = tf.summary.histogram("weights2", W2)
+cost_summ = tf.summary.scalar("cost", cost)
+```
+
+##### 2. 모든 summary(위의 w2_hist, cost_summ)을 합쳐준다.
+```python
+summary = tf.summary.merge_all()
+```
+
+##### 3. summary를 어느 파일 경로에 저장할 것인지 정한다. 그 후 그래프를 넣어준다.
+```python
+writer - tf.summary.FileWriter(....)
+writer.add_graph(sess.graph)
+```
+
+##### 4. summary를 실행시켜준다.
+```python
+s, _ = sess.run([summary, optimizer], feed_dict=feed_dict)
+writer, add_summary(s, global_step=global_step)
+```
+
+##### 5. TensorBoard를 실행시킨다.
+
+
+
